@@ -22,9 +22,6 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace WpfSqliteApp
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private static Tuple<int, string>? ItemSelected;
@@ -112,7 +109,7 @@ namespace WpfSqliteApp
             }
             else
             {
-                CustomDialog customDialog = new CustomDialog("Os valores estão incorretos, corriga-os e tente novamente");
+                CustomDialog customDialog = new CustomDialog("Os valores estão incorretos, corrija-os e tente novamente.");
                 customDialog.ShowDialog();
 
                 return false;
@@ -126,7 +123,7 @@ namespace WpfSqliteApp
 
                 if (db.Games.Contains(game))
                 {
-                    CustomDialog customDialog = new CustomDialog("Este Game ja esta cadastrado");
+                    CustomDialog customDialog = new CustomDialog("Este Game já esta cadastrado.");
                     customDialog.ShowDialog();
                     return false;
                 }
@@ -157,7 +154,7 @@ namespace WpfSqliteApp
         {
             if (ItemSelected == null)
             {
-                CustomDialog customDialog = new CustomDialog("Nemhum item esta selecionado");
+                CustomDialog customDialog = new CustomDialog("Nenhum item esta selecionado.");
                 customDialog.ShowDialog();
 
             }
